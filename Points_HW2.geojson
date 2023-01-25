@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "Points_HW2",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 7, "Points": "Coates Parking" }, "geometry": { "type": "Point", "coordinates": [ -79.050783628572646, 35.915629722069212 ] } },
+{ "type": "Feature", "properties": { "id": 1, "Points": "Home" }, "geometry": { "type": "Point", "coordinates": [ -79.057002409583191, 35.9232791924574 ] } },
+{ "type": "Feature", "properties": { "id": 5, "Points": "Stoney River" }, "geometry": { "type": "Point", "coordinates": [ -79.02882480216185, 35.927744165667896 ] } }
+]
+}

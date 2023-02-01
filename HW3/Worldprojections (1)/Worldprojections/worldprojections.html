@@ -8,23 +8,65 @@
 <body>
     <h1>In this project I learned how to display images in different projections</h1>
     
-    <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
-    <p>You can write a paragraph here</p>
+    <h3 style="color:red">How to display a map in different projections using QGIS</h3>
+    <p>This task is quite simple, I used the Natural Earth 1:10m Cultural vector to first display a basic world map from the website. I then downloaded that vector to my files and unzipped the folder to access from QGIS from "add layer" tab under "browser". I then toggled the plugin tab of QGIS and installed Indicatrix mapper to display the scale circles on the map. To display different projections, simply click the "current CRS" on the bottom right of QGIS and filter the projection to be whatever you want. The most popular are from EPSG and ESRI databases. In the following page, there are a total of 9 different projections. </p>
     
     <h2>WGS84 Projection</h2>
-    <h3>Some observations</h3>
+    <p>This projection at first glance looks like a typical globe faltened out. Upon closer observation, one can carefully distinguish how the polls seem to be getting larger and more elongated. The most accurate representations can be seen near the equator, and the enlargments and elongagtions grow larger as you reach the poles on opposite ends. When adding the Indicatrix layer, groups of elipses in an 11 by 5 grid warp around the map to illustrate the disproportinate ratio of land area visualization. In this example, the elipses near the poles are bigger and wider on the sides comapred to those who show a perfect circle in the center at the equator.  </p>
     <a href=".//maps/4326.png">
     <img src=".//maps/4326.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
+    <p>Unlike the WGS84, this projection has an oval shape to it, not a square. It does a better job of depicting a more accurate representation of Earth given that there is curvature and Earth is a sphere. However, it is difficult to argue total accuracy with regard to equal representation because some elipses seem to have much more area than others. This could dictate that elipses at the extremities, such as the left and right end of the equator, as well as the long ovals near the ends of the poles are misrepresented. The most perferct looking elipses seem to be on the prime meridian and grow more skewed to ovals the farther they drift from the middle to the right or left, with corner extremeties at the poles the most skewed. Lastly, it appears that Africa is depicted the most accuratley to scale from the angle provided. </p>
     <a href=".//maps/54043.png">
     <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
     </a>
-    <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2>
-    <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3>
-    <p></p>
-    <h2>Data used for this project</h2>
+
+    <h2>Psudeo-Mercator Projection: EPSG 3857</h2>
+    <p>This projection has similar attributes to the WGS84 in that is also a square shape and has disproportionatley larger areas of land near the poles. Greenland is almost the same size as Africa which is not accurate in real life. Furthermore, unlike the previous two projections which has depicted oval-shaped elipses near the extremities, the elipses on the pole of this projection are still prefect squares just larger. This shows that there is soley a dispraportion in size, not shape. </p>
+    <a href=".//maps/HW3_a.png">
+    <img src=".//maps/HW3_a.png" alt="Pseudo" width='500px'>
+    </a>
+
+    <h2>Sphere Winkle I Projection: ESRI 53018</h2>
+    <p>In this projection, there seems to be a nice balance from features of the Psuedo-Mercator and the Aitoff projections. similar to the Aitoff, it is an oval-like map and the extremities show the greatest change in size and shape from the center. Yet, unlike the Aitoff, the elipses of the Winkle I are fairly simialar in size, giving it one of the most realistic depictions to scale of our curved Earth.</p>
+    <a href=".//maps/HW3_b1.png">
+    <img src=".//maps/HW3_b1.png" alt="Pseudo" width='500px'>
+    </a>
+
+    <h2>World Cylindrical Equal Area Projection: ESRI 54034</h2>
+    <p>Similar to the WGS84, this map has the poples very elongated as they near the poles and is a square. This projection however drastically stretches the width of the elipses in the poles, making Antartica really thin and Greenland a small fraction of Africa compared to other projections. This projection does a decent job of depicting proportionalaity by size, not shape. </p>
+    <a href=".//maps/HW3_c.png">
+    <img src=".//maps/HW3_c.png" alt="Equal Area" width='500px'>
+    </a>
+
+    <h2>World Equidistant Conic Projection: ESRI 54027</h2>
+    <p>This projection is distinct in that it is displayed as a circle, not an oval or square. One can observe the view of our globe from the artic, with Antartica almost completly surrounding the perimeter. The elipses closest to the center of the poles are the most accurate representatino while the outwardmost ones near Antartica are very long and stretched ovals. Continents grow larger the farter they are from the artic.  </p>
+    <a href=".//maps/HW3_d.png">
+    <img src=".//maps/HW3_d.png" alt="Equidistant" width='500px'>
+    </a>
+
+    <h2>North Pole Azimuthal Equidistant Projection: ESRI 102016</h2>
+    <p>Just like the previous Conic projection, this equidistant projection is also displayed as a circle. This biggest difference between these two projections is that the Azimuthal equidistant has Antartica completly surround the perimeter of the projection, and the Pacific ocean is smaller, with continents seeming bigger and closer to each other all together. Just like in the conic map, the elipses at the extremities of the projectino in Antartrica are very thin and skewed ovals. </p>
+    <a href=".//maps/HW3_e.png">
+    <img src=".//maps/HW3_e.png" alt="Azimuthal" width='500px'>
+    </a>
+
+    <h2>World Wagner IV Projection: ESRI 54074</h2>
+    <p>The Wagner IV is a blend between the Winkle I and the Aitoff with regards to the oval shape and ratio of the elipses. Even the center elipses at the equator have an oval shape to them , so it appears that the size and shape on this projection are accuratly portrayed to an extent, similar to the Winkle I. Here one can obsereve how Greenland is smaller than Africa, but not super elongated to where it loses its shape like in the Cylindrical Equal Area projection where Greenland was unrecognizable. The extremetites have oval elipses, but Antartica is more to scale and does not have that large of an area comapeared to other projections (though still not accurate).</p>
+    <a href=".//maps/HW3_f.png">
+    <img src=".//maps/HW3_f.png" alt="Walker" width='500px'>
+    </a>
+
+    <h2>World Van Griten I Projection: ESRI 54029 </h2>
+    <p>The Van Griten I Projection is an interesting map in that it has the circle display of the Azimuthal and Conic, but instead of portraying from an above artic view, it provides the typical Equator/North American prespective and while it has the continued pattern of elongated oval elipses at the extremities of the poles, there seems to be a disproportionate area of the map allocated to Antartica toward the bottom. This is interesting because up until Antartica, just by looking at Greenland and Africa, one might assume this is a Mercator (even if it curves and a Mercator does not). Yet, Antartica takes up about 1/4 of the circle projection area, so it is interesting to see that while shape accuracy was maintained to an extent, the size at the poles seem to be very exaggerated. </p>
+    <a href=".//maps/HW3_g.png">
+    <img src=".//maps/HW3_g.png" alt="Van Griten" width='500px'>
+    </a>
+
+
+
+    <h4>Data used for this project</h4>
     <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
 </body>
 </html>

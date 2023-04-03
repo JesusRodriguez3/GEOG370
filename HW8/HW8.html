@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 8</title>
+</head>
+<body>
+<h1>Homework 8: Geoprocessing Analysis </h1>
+<h2>Jesus Rodriguez</h2>
+
+<p> For my real-world analysis, I looked at the the medical facilities in North Carolina that are within a 1 mile radius of a designated low bandwidth block of under 10mb/s. I chose this because I used to work for a telehealth company and one of the biggest roadblocks in their line of work was strong and consistent network speed. More so than actual network connectivity, if data is not transffered at a fast enough speed, diagnoseses take longer to confirm. I gathered data from NCOneMap.gov and found a dataset for ~34,000 medical facilities along with blocks of areas that recorded less than 10 downloads and 1 upload per second (less than 10mb/s) for December 2020. This date is important because it marks the middle of the COVID19 pandemic where telehealth services were used in massive volume. I used a buffer of 1 mile from the medical facilities and I also used a buffer of 0.1 mile for the low bandwidth zones. I then geoprocessed both of these buffers using the intersection tool to highlight areas that overlap between these two areas. The areas in red are the actual zones where bandwidth is under 10mb/s and the yellow areas are areas of intersection between the medical faciloties and their 1 mile radius. It is evident that the majority of medical centers are not within a 1 mile radius of a low bandwidth zone, but there are still a good number of centers in this predicament which is not ideal for centers who need to upload images and scans over the typical 4mb/s. While there can be a multitude of subjective conclusions, one could argue this is not a big an issue as the map suggests. For one, the term 'medical facilities' is a very broad term and upon further research, none of the state's 163 hospitals are in the low zones, and it is possible some of these facilities included are warehouses for medical supplies that do not require intense bandwidth. Regardless, maving such low levels of bandwidth with noticiable yellow intersection does raise cause for concern over the quality of data and care offered by some of the lesser funded insitiutions or companies. While a more in depth analaysis should be conducted with more specific parameters like facility type, it is evident some medical centers operate under historically low bandwidth areas and while some of these facilities can afford private networks, the residents in their local area may not be able to. So even though from a hospital or facility prespective it may not be an issue, from the prespective of a telehealth company, without the patient access from home, the issue is still a very prevelant one.     </p>
+<a href="HW8map.png">
+    <img src="HW8map.png" alt="FL Combined Map" width='500px'>
+    </a>
+
+<!-- Link to your shapefile in Github and you CSV -->
+<h2>Data used for this project</h2>
+    <a href="https://www.nconemap.gov/datasets/bb3150b20e3b40749fe509ed4d10e0ba_2/explore?location=35.160304%2C-79.936500%2C7.33"> Link for Medical Facilities </a>
+    <div><a href="https://www.nconemap.gov/datasets/86473c5dc12b4c07b7029727ce855c83_0/explore?location=35.085135%2C-79.888653%2C7.09"> Link for Blocks LessThan 10 Download And 1 Upload December2020 </a></div>
+    <div><a href="medical facilities.shp"> Medical Facilities SHP</a></div>
+    <div><a href= "low bandwidth nc.shp"> Low Bandwidth Areas SHP</a></div>
+    <p></p>
+
+</body>
+</html>
